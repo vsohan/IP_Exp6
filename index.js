@@ -9,7 +9,7 @@ app.get("/", function (req, res) {
 	res.sendFile(__dirname + "/" + "index.html");
 });
 
-app.get("/bmicalculator", function (req, res) {
+app.post("/bmicalculator", function (req, res) {
 	heigh = parseFloat(req.body.Height);
 	weigh = parseFloat(req.body.Weight);
 	bmi = weigh / (heigh * heigh);
